@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Ammo Crisis Design Documentation - Ben Thompson</title>
+		<title>Introduction to Games Design Semester 1 - Ben Thompson</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
@@ -14,267 +14,287 @@
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
+			<!-- Header -->
+			<header id="header">
+				<div class="inner">
 
-							<!-- Logo -->
-								<a href="../index.html" class="logo">
-									<span class="title">Ben Thompson</span>
-									<!--<span class="icon brands style1 fa-dev"></span>-->
-								</a>
+					<!-- Logo -->
+					<a href="../index.html" class="logo">
+						<span class="title">Ben Thompson</span>
+						<!--<span class="icon brands style1 fa-dev"></span>-->
+					</a>
 
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
-
-						</div>
-					</header>
-
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
+					<!-- Nav -->
+					<nav>
 						<ul>
-							<li><a href="../index.html">Home</a></li>
-							<li><a href="../portfolio.html">Portfolio</a></li>
-							<li><a href="../music.html">Music</a></li>
-							<li><a href="introgamesdesign.html">Introduction to Games Design</a></li>
+							<li><a href="#menu">Menu</a></li>
 						</ul>
 					</nav>
 
-				<!-- Enemy Quickpointing -->
-					<div id="main">
-						<div class="inner">
-							<span class="image main"><img src="itgd/ITGD.jpg" alt="Introduction to Games Design" /><h1>SEMESTER 1</h1></span>
-							<p>The design work below is a formatted version of the work I submitted for the first semester of the Introduction to Games Design module.</p>
-							<h2>Skills: Level Design, Gameplay Design | Engine: Unreal Engine 4</h2>
-							<p>After familiarising myself with how Ammo Crisis played, I got to work creating some ideas on how I wanted the level to play, particularly focusing on the weapons. After giving it some thought, I felt like the best area to start was to work on creating some weapons, and then enemies to use them on. Once that is done, I’ll start work designing the level, and then go back and fine tune the balancing of the stats when needed.</p>
-							<ul class="alt"><li></li><li></li></ul> <!-- Line Break -->
-							<h1>WEAPON DESIGN</h1>
-							<h2>Quick Point Tables</h2>
-							<p>To come up with ideas for what my weapons would be and how they should function compared to each other, I looked at 3 different games and made Quick Point tables, analysing how the different weapon types are balanced compared to each other. The first is Peril, a project developed by lecturers and used by the university on course modules. The other two I chose were Fortnite and Splatoon 2. For all the quick point tables, 1 is the least/worst, and the highest value is the most/best.</p>
-							<!-- Peril Quick Point Table-->
-							<h4>Peril Quick Point Table</h4>
-							<span class="image fit"><img src="ammocrisis/W8_QP_Peril.jpg" alt="Peril Quick Point Table" /></span>
-							<p>When quick pointing the weapons in Fortnite, I only focused on the weapons currently available in the main game at the time (Chapter 2, Season 6), and ignored weapons that were very similar or being inferior versions of another weapon (like the Revolver and Makeshift Revolver).</p>
-							<!-- Fortnite Quick Point Table-->
-							<h4>Fortnite Quick Point Table</h4>
-							<span class="image fit"><img src="ammocrisis/W8_QP_Fortnite.jpg" alt="Fortnite Quick Point Table" /></span>
-							<p>For Splatoon 2, I chose to quick point the weapon types (as the game has well over 100 weapons).</p>
-							<!-- Splatoon 2 Quick Point Table-->
-							<h4>Splatoon 2 Quick Point Table</h4>
-							<span class="image fit"><img src="ammocrisis/W8_QP_Splatoon2.jpg" alt="Splatoon 2 Quick Point Table" /></span>
-							<h2>Weapon Creation</h2>
-							<p>
-								The first thing I did to decide on the different weapons I was going to use in the level. Once I had 5 of them nailed down, I quick pointed out how the stats were going to differ between them.
-								<!-- Ammo Crisis Quick Point Table -->
-								<h4>Weapon Quick Point Table</h4>
-								<span class="image fit"><img src="ammocrisis/W91_QP_Weapons.jpg" alt="Weapon Quick Point Table" /></span>
-							<p>To get a stronger sense of what the weapons were going to be like, I created basic weapon diagrams, going into more detail for the individual weapons by assigning preliminary values to the weapon statistics.</p>
-							<!-- Weapon Diagrams -->
-							<h4>Weapon Diagrams</h4>
-							<span class="image fit"><img src="ammocrisis/W9_WDI_Pistol.jpg" alt="Pistol Diagram" /></span>
-							<span class="image fit"><img src="ammocrisis/W9_WDI_Shotgun.jpg" alt="Shotgun Diagram" /></span>
-							<span class="image fit"><img src="ammocrisis/W9_WDI_Rifle.jpg" alt="Rifle Diagram" /></span>
-							<span class="image fit"><img src="ammocrisis/W9_WDI_EnergyBlaster.jpg" alt="Energy Blaster Diagram" /></span>
-							<span class="image fit"><img src="ammocrisis/W9_WDI_RocketLauncher.jpg" alt="Rocket Launcher Diagram" /></span>
-							<p>Next, I chose to create the stats for the different enemies, and then balance the weapons with them.</p>
-							<ul class="alt"><li></li><li></li></ul> <!-- Line Break -->
-							<h1>ENEMY DESIGN</h1>
-							<p>The Ammo Crisis framework had preset enemies, but the Health and Max Speed stats were editable on each one. Because enemies in the framework only have two controllable attributes, the quick point table I came up with for them was very simplistic. Another enemy, <em>DoomCrab</em> is also present in the framework's enemy list, but cannot be placed into the level so is ignored for the quick point table.</p>
-							<!-- Enemy Quick Point Table -->
-							<h4>Enemy Quick Point Table</h4>
-							<span class="image fit"><img src="ammocrisis/W9_QP_Enemy.jpg" alt="Enemy Quick Point Table" /></span>
-							<p>I want to have the enemy stats be designed in such a way that incentivises using the different weapons in the level. My idea for the enemies was to have the goblins be weak but fast, making them harder to hit with the slower and less accurate weapons; the zombies are to be the 'middle' unit, having average health and speed; the archers are the slow, tanky units that have a lot of health, translating into them being harder to take down but also more vulnerable to the slower, stronger weapons.</p>
-							<p></p>
-							<!-- Enemy Diagrams -->
-							<h4>Enemy Diagrams</h4>
-							<span class="image fit"><img src="ammocrisis/W9_EDI_Goblin.jpg" alt="Goblin Diagram" /></span>
-							<span class="image fit"><img src="ammocrisis/W9_EDI_Zombie.jpg" alt="Zombie Diagram" /></span>
-							<span class="image fit"><img src="ammocrisis/W9_EDI_Archer.jpg" alt="Archer Diagram" /></span>
-							<span class="image fit"><img src="ammocrisis/W9_EDI_Spawner.jpg" alt="Spawner Diagram" /></span>
-							<ul class="alt"><li></li><li></li></ul> <!-- Line Break -->
-							<h1>WEAPON AND ENEMY BALANCING</h1>
-							<p>I took this data, creating stats for the enemy types and converting it into an Excel spreadsheet, which I then used to begin balancing the weapons and enemy stats. To start this, I charted the total damage output of each weapon over a clip and full ammo count, then compared how many of each of the enemies would be defeated by each. While this does abstract out some gameplay elements like the agility of each enemy type, it provides a good insight into balancing before proper testing in the level can begin.</p>
-							<!-- Excel Total Damage Dealt Tables -->
-							<h4>Total Damage Dealt Tables</h4>
-							<span class="image fit"><img src="ammocrisis/W9_TotalDamageDealt.jpg" alt="Total Damage Dealt Tables" /></span>
-							<p>Using this data, I can start to figure out which weapons perform the worst compared to the others, and make sure that the amount of enemies defeated lines up with the projected strengths of the weapons based on the original quick point tables. The obvious worst weapon is the shot gun used at range, as I deliberately set it up to have a short, inaccurate shot forcing the player to get closer if they want to use it. The rest of the values fall in line with how I'm envisioning each weapon being used; one weapon I'm going to pay closer attention to is the energy blaster. It is currently listed as being the weakest of all the weapons when just taking into account the damage, but I want to have a fast firing rate to compensate (which can't be easily shown by my current charts). To help give me a better picture, I created another chart that showed the fire rate and damage over a length of time.</p>
-							<!-- Weapon Fire Rate Table -->
-							<h4>Weapon Fire Rate Tables</h4>
-							<span class="image fit"><img src="ammocrisis/W9_FireRate.jpg" alt="Total Fire Rate Tables" /></span>
-							<p>After looking at this table as well, I found that the energy blaster seemed to be weaker than the other guns, with it not being able to put out as much damage compared to the other weapons. Thus, I decided to buff it slightly, by increasing the damage output to 2, however this led to the damage output being the same as the rifle. This is something I wanted to avoid as it pretty much turned the energy blaster into a faster rifle, and with only 5 weapons in the level I wanted to make sure each one felt unique. So, I had to come up with another way to balance the weapon. I decided for the sake of having more varied weapons that I was going to deviate from my original plan and quick point table slightly; I gave the energy blaster more ammo than the rifle, and moved damage to 1.75. I believe this is still balanced as the tables I have made don’t reflect other attributes like range, which the energy blaster is more proficient in; because the change is a deviation from my original quick point tables, I want to particularly focus on it in testing.</p>
-							<h2>Weapon Balance Graphs</h2>
-							<p>To further visualise weapon damage output, I decided to make a graph to show damage output over time in more detail, instead of just 5 seconds and the full clip. After setting up teh calculates (to account for clip running out), I realised that some of the weapons would have another clip loaded and be able to do more damage before the 10 seconds had elapsed, so changed the Excel formula to account for it.</p>
-							<!-- Weapon Damage Over Time Graph/Chart -->
-							<h4>Weapon Damage Over Time</h4>
-							<span class="image fit"><img src="ammocrisis/W9_WeaponDamageOverTime.jpg" alt="Weapon Damage Over Time Table" /></span>
-							<p>I also charted how many enemies would be defeated by each of the weapons.</p>
-							<!-- Enemies defeated by each weapon chart -->
-							<h4>Enemies Defeated Chart</h4>
-							<span class="image fit"><img src="ammocrisis/W9_EnemiesDefeated.jpg" alt="Enemies Defeated Tables" /></span>
-							<span class="image fit"><img src="ammocrisis/W9_EnemiesDefeatedTable.jpg" alt="Enemies Defeated Graphs" /></span>
-							<ul class="alt"><li></li><li></li></ul> <!-- Line Break -->
-							<h1>GAMEPLAY DESIGN</h1>
-							<!-- Gameplay Diagrams -->
-							<h2>Basic Game Loop Diagram</h2>
-							<span class="image fit"><img src="ammocrisis/W9_GameLoopDiagram.jpg" alt="Basic Game Loop Diagram" /></span>
-							<h2>Mechanics Diagrams</h2>
-							<h4>Reload</h4>
-							<span class="image fit"><img src="ammocrisis/W9_MD_Reload.jpg" alt="Reload Diagram" /></span>
-							<h4>Door Opening</h4>
-							<span class="image fit"><img src="ammocrisis/W9_MD_DoorOpening.jpg" alt="Door Opening Diagram" /></span>
-							<h4>Weapon Pickup</h4>
-							<span class="image fit"><img src="ammocrisis/W9_MD_WeaponPickup.jpg" alt="Weapon Pickup Diagram" /></span>
-							<h4>Weapon Switching</h4>
-							<span class="image fit"><img src="ammocrisis/W9_MD_WeaponSwitch.jpg" alt="Weapon Switching Diagram" /></span>
-							<h2>UI Wireframes</h2>
-							<!-- UI Wireframes -->
-							<h4>Base Screenshot</h4>
-							<span class="image fit"><img src="ammocrisis/W9_UIW_Base.jpg" alt="UI Base Screenshot" /></span>
-							<h4>Screenshot + Wireframe Overlay</h4>
-							<span class="image fit"><img src="ammocrisis/W9_UIW_Overlay.jpg" alt="UI Screenshot + Wireframe Overlay" /></span>
-							<h4>Wireframe Iteration 1</h4>
-							<span class="image fit"><img src="ammocrisis/W9_UIW_1.jpg" alt="Wireframe Iteration 1" /></span>
-							<h4>Wireframe Iteration 2</h4>
-							<span class="image fit"><img src="ammocrisis/W9_UIW_2.jpg" alt="Wireframe Iteration 2" /></span>
-							<ul class="alt"><li></li><li></li></ul> <!-- Line Break -->
-							<h1>LEVEL DESIGN</h1>
-							<p>Because Ammo Crisis' core gameplay loop is focused on survival and being hit by the enemy a single time results in a game over, I wanted to foucs on creating areas that give the player different movement options, as well as areas of cover to hide from fire (especially in rooms with the ranged Archer enemies). I also want to make sure that the enemy placement results in an evenly-spread rising difficulty as the player progresses through the level. To achieve this, concurrent to the other elements of my plan I kept track of the total health in each area of the level, and charted it in Excel.</p>
-							<p>After brainstorming some ideas that I wanted to put into the level, I went about creating a bubble map plan to work from. Because the assignment is to design a single level (with no reference to where in a game it would take place), I decided to properly introduce the player to the mechanics and enemies in isolation, giving them time to understand their behaviour before being thrown into a big fight with them, in case it is their first time playing.</p>
-							<!-- Bubble Maps -->
-							<h2>BUBBLE MAPS</h2>
-							<h4>Iteration 1</h4>
-							<span class="image fit"><img src="ammocrisis/W9_BM_1.jpg" alt="Bubble Map Iteration 1" /></span>
-							<h4>Iteration 2</h4>
-							<span class="image fit"><img src="ammocrisis/W9_BM_2.jpg" alt="Bubble Map Iteration 2" /></span>
-							<h4>Final Iteration</h4>
-							<span class="image fit"><img src="ammocrisis/W9_BM_3.jpg" alt="Bubble Map Final Iteration" /></span>
-							<p>With the bubble maps, I highlight general weapon locations, but this may change as I work on and balance the level. I also made a beats and pacing diagram to show the difficulty/intensity that I want to hit with the level (with the level being broken down into the same sections as the final bubble map iteration). For the level structure, I aim to loosely follow the 3-act structure, as it builds up the difficulty and intensity effectively but also gives the player room to breathe.</p>
-							<h2>Beats and Pacing Diagrams</h2>
-							<h4>Beats Map</h4>
-							<span class="image fit"><img src="ammocrisis/W9_BeatMap.jpg" alt="Beats Map" /></span>
-							<h4>Beats Map and Pacing Diagram</h4>
-							<span class="image fit"><img src="ammocrisis/W9_BeatAndPacing.jpg" alt="Beats Map and Pacing Diagram" /></span>
-							<h4>Level Pacing Curve</h4>
-							<span class="image fit"><img src="ammocrisis/W9_PacingCurve.jpg" alt="Level Pacing Curve" /></span>
-							<h2>Level Pixel Map</h2>
-							<p>As I was designing my level, the only part I was unsure of was the scaling. I had done some testing in the framework, but didn't yet have a proper gauge on how big each section should be. In the base pixel map, each pixel represents a 250x250 unit square in the level.</p>
-							<h3>Basic Map</h3>
-							<span class="image fit"><img src="ammocrisis/W9_BasePixelMap.jpg" alt="Basic Pixel Map" /></span>
-							<h3>Full Level Map</h3>
-							<span class="image fit"><img src="ammocrisis/W9_FullLevelMap.jpg" alt="Full Level Map" /></span>
-							<p>After creating the map, I found that the graph of enemies per room was somewhat unbalanced. I intend for the later rooms to take longer (so having more health is justified), and combined with the introduction of the rocket launcher for the final room I think the balance should work out fine; however it is something I'm going to play close attention to when I'm testing the built level.</p>
-							<h2>Enemy Health Balance Graph</h2>
-							<span class="image fit"><img src="ammocrisis/W9_EnemyHealthBalance.jpg" alt="Enemy Health Balance Graph" /></span>
-							<p>I also made a 3D version of the pixel map using <em>MagicaVoxel</em>.</p>
-							<h2>MagicaVoxel 3D Voxel Map</h2>
-							<span class="image fit"><img src="ammocrisis/W9_MagicaVoxelMap.jpg" alt="MagicaVoxel Map" /></span>
-							<h2>Bubble Map Overlay</h2>
-							<span class="image fit"><img src="ammocrisis/W9_BubbleMapOverlay.jpg" alt="Bubble Map Overlay" /></span>
-							<p>As I was working on the level, I ran into an issue with the rocket launcher only firing once, and then locking the player to the weapon after recharging, unable to fire, swap or even open doors to progress further into the level. Luckily, the issue was simple to fix as all I needed to do was increase the <em>Reload Shot</em> weapon stat to be more than 0.</p>
-							<h2>Level Overview</h2>
-							<span class="image fit"><img src="ammocrisis/W9_LevelOverview.jpg" alt="Level Overview" /></span>
-							<ul class="alt"><li></li><li></li></ul> <!-- Line Break -->
-							<h1>LEVEL PLAYTHROUGH VIDEO</h1>
-							<div class="container">
-								<iframe src="https://www.youtube.com/embed/KYjA9O_GPRY" title="Ammo Crisis - Level Iteration 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
-							</div>
-							<br></br>
-							<h1>LEVEL ANALYSIS</h1>
-							<p>The most glaring issue from the gameplay footage is the enemy spawners in the final room causing way too many enemies to be spawned. My plan to stop this from happening in the next level iteration is to increase the time taken for enemies to spawn, and decrease the amount of goblins that are spawning.</p>
-							<p>Another issue with the level design is the scaling of the level. Much like with the Peril design task from Semester 1, I made some of the areas way too big; this issue is exaggerated with the relatively slow character movement in Ammo Crisis. I plan to scale down some of the areas and rebuild parts of the level, particularly cutting down on the long corridors that pad out how long the level takes.</p>
-							<p>After the playthrough, I also have issues with the difficulty scaling in the level; the earlier areas feel like they are too easy, and then the difficulty ramps up massively by the end of the level. In it's current state, the pacing is a far cry from the beats and pacing map I had created earlier, so this is something that I want to rectify. I feel like adding some more larger fighting areas with different, more varied design in the rooms will help increase the action in the level as well as the fun the player will have in the level. Finally, I want to take out some of the ammo options, as after some playtesting it felt very unnecessary to give the player so much ammo (apart from the one at the end of the level).</p>
-							<ul class="alt"><li></li><li></li></ul> <!-- Line Break -->
-							<!--
-		Level Design Iteration 2
-	-->
+				</div>
+			</header>
 
-							<h1>LEVEL DESIGN ITERATION 2</h1>
-							<p>To improve and refine my level, I want to have a second iteration of the design, to hopefully fix the issues I had with the level I had already created. The first thing I did was lay out the changes by tweaking my bubble maps. I wanted to keep the first section the same, having the player being introduced to the goblins and spawners, but I also want to introduce the zombie enemies at this stage too so that the pacing doesn't have to be slowed down later in the level when introducing the enemies in isolation. I also replaced the current zombie introduction with the archers; by using the enemies sooner in the level, it gives me more areas to experiment with enemy patterns later in the level.</p>
-							<h2>BUBBLE MAPS</h2>
-							<h4>Iteration 1</h4>
+			<!-- Menu -->
+			<nav id="menu">
+				<h2>Menu</h2>
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../portfolio.html">Portfolio</a></li>
+					<li><a href="../music.html">Music</a></li>
+					<li><a href="introgamesdesign.html">Introduction to Games Design</a></li>
+				</ul>
+			</nav>
 
-							<span class="image fit"><img src="ammocrisis/W92_BM_1.jpg" alt="Bubble Map Iteration 1" /></span>
-							<h4>Iteration 2</h4>
-							<span class="image fit"><img src="ammocrisis/W92_BM_2.jpg" alt="Bubble Map Iteration 2" /></span>
-							<h4>Final Iteration</h4>
-							<span class="image fit"><img src="ammocrisis/W92_BM_3.jpg" alt="Bubble Map Final Iteration" /></span>
-							<p>For the pacing and intensity of the level, I want to keep most of it the same, by trying to stick to the 3-act structure, especially given the first iteration of the level had somewhat missed the mark on achieveing it. This ended up being altered from how Iteration 1's was presented, with the start and middle sections increasing in size to accommodate the design changes.</p>
-							<h2>Beats and Pacing Diagrams</h2>
-							<h4>Beats Map</h4>
-							<span class="image fit"><img src="ammocrisis/W92_BeatMap.jpg" alt="Beats Map" /></span>
-							<h4>Beats Map and Pacing Diagram</h4>
-							<span class="image fit"><img src="ammocrisis/W92_BeatAndPacing.jpg" alt="Beats Map and Pacing Diagram" /></span>
-							<h4>Level Pacing Curve</h4>
-							<span class="image fit"><img src="ammocrisis/W92_PacingCurve.jpg" alt="Level Pacing Curve" /></span>
-							<p>I then reflected these changes on the map of the level.</p>
-							<h2>New Level Map</h2>
-							<span class="image fit"><img src="ammocrisis/W92_FullLevelMap.jpg" alt="Iteration 2 Full Level Map" /></span>
-							<p>Referring back to the total health chart, it now showed a much more balanced map, especially taking into account the length of different sections. I decided to keep the lull in health before the final room, as it helped to make the large final section feel more climactic and it gives the player a break from the constant rising intensity.</p>
-							<h2>Total Enemy Health Chart</h2>
-							<span class="image fit"><img src="ammocrisis/W92_TotalEnemyHealth.jpg" alt="Enemy Health Balance Graph" /></span>
-							<h2>Changes From Map Design</h2>
-							<p>When building the level, I chose to make the change of decreasing the size of the first spawner room by making it thinner. This helps push the player into their first encounter with the spawner, making them learn the functionality instead of them just attempting to go around it. I also added a handful of goblins to the corridor section, making it slightly harder to get through, as well as shortened the rest area before the final room. The final room was changed by converting the archer spawner into a goblin one, as if the player takes a long time to get through the level they would be faced with a near-impenetrable wall of strong enemies.</p>
-							<h2>Final Level Overview</h2>
-							<span class="image fit"><img src="ammocrisis/W92_LevelOverview.jpg" alt="Level Overview" /></span>
-							<ul class="alt"><li></li><li></li></ul> <!-- Line Break -->
-							<h1>FINAL BALANCING</h1>
-							<p>Once I started to play the level, the difficulty immediately felt much more balanced than the first iteration, showing that the changes I had made were effective at improving the level, and made the decision to only make some balancing tweaks and not another full level iteration. However, I found that my decision to remove some of the ammo meant I was running out once more group enemy encounters were introduced into the level. Because I felt like re-adding the ammo options would make the level too easy and work against the improvements I had made over the first iteration, I decided to instead rebalance the weapon ammo counts.</p>
-							<p>Going back to my balance charts, I found that the energy blaster was outputting the least amount of damage over its clip, so I added more ammo to it.</p>
-							<p>The other balancing change I made was decreasing the archers' health. While I still want them to be bulkier, most of the weapons take around 10 seconds of continuous fire to kill them, so I felt this value needed scaling back slightly to avoid the player seeing them as bullet sponges and have them find the level tedious to get through.</p>
-							<p>After some playtesting, I once again decreased the spawners in the final room, as they were still causing a very large amount of enemies to be spawned. Now, a goblin is spawned every 10 seconds and a zombie every 15. This change not only stops a huge horde of enemies from confronting the player as they enter the final room, but also lets the player kill the enemies that are there before new ones spawn.</p>
-							<h2>Revised Total Weapon Damage Graphs</h2>
-							<span class="image fit"><img src="ammocrisis/W92_Balance1.jpg" alt="Revised Total Weapon Tables" /></span>
-							<span class="image fit"><img src="ammocrisis/W92_Balance2.jpg" alt="Revised Total Weapon Graphs" /></span>
-							<ul class="alt"><li></li><li></li></ul> <!-- Line Break -->
-							<h1>FINAL LEVEL GAMEPLAY VIDEO</h1>
-							<div class="container">
-								<iframe src="https://www.youtube.com/embed/Ce4hlYsMdcw" title="Ammo Crisis - Level Iteration 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
-							</div>
-							<br></br>
-							<h1>FINAL ANALYSIS</h1>
-							<p>With the second iteration and final balancing tweaks, I feel like I've very much elevated the quality of the level and made it much more balanced and fun to play. While there are still some issues, these are mostly just caused by quirks in the framework, such as enemies detecting the player through walls, them being right outside a door when it is opened, and spawners spawning enemies on top of the player. The balancing changes I made also make the level line up with my original beats and pacing maps, as well as having the weapons and enemies mostly line up with my original ideas and be balanced against each other. Because of this, I feel like any extra changes I would make to the level would just be unnecessary and potentially work at a detriment to the level itself instead of improving it further.</p>
-							<p><a href="../portfolio.html" class="button primary fit">Back to Portfolio</a><p>
+			<div id="pageHeader">
+				<div class="inner">
+					<span class="image main"><img src="itgd/ITGD.jpg" alt="Introduction to Games Design" /></span>
+					<h1>SEMESTER 1</h1>
+					<p>This is a revised version of the work that I submitted for the first semester of the Introduction to Games Design module.</p>
+				</div>
+			</div>
+			<ul class="alt"><li></li><li></li></ul> <!-- Line Break -->
+			<div id="Week1">
+				<div class="inner">
+					<!-- Escape Goat Level Design -->
+					<h1>ESCAPE GOAT LEVEL DESIGN</h1>
+					<h3>Skills: Level Design | Engine: Escape Goat Editor</h3>
+					<p>Before I started to come up with a concept for my level, I played through the game demo to grasp how the game played, and how the different mechanics could potentially interact with each other. Once I had done that, I moved on to creating a basic pixel map for the level.</p>
+					<p><span class="image left"><img src="itgd/Sem1/Sem1Week1_1.jpg" alt="Base Pixel Map" /></span>The first section I mapped out was the first portion of the level. For this section, the player needs to use the mouse to press the switches and escape to the rest of the level. The trapdoors are open as of the start of the level, but to get out to the upper section they close, needing the player to think about how to use the mouse to reopen them again.</p>
+					<p>
+						<span class="image right"><img src="itgd/Sem1/Sem1Week1_2.jpg" alt="Layout Pixel Map" /></span>
+						For the main part of the level, I decided to experiment with the different objects and their interactions to see what ideas would work well and be fun for the player. Originally, I planned on using a grid-based room pattern where the player would traverse through small rooms, but changed it due to each room being small and cramped, and feeling the need to experiment with a larger areas to make more interesting puzzles.
+					</p>
+					<p>
+						<span class="image left"><img src="itgd/Sem1/Sem1Week1_3.jpg" alt="Layout Pixel Map" /></span>
+						After playing around with different ideas, I came up with the idea of using the gargoyles and skulls to trap the player after they enter the lower section for the key, and then have them solve the puzzle to figure out a way to escape the room again.
+					</p>
+					<p>
+						<span class="image right"><img src="itgd/Sem1/Sem1Week1_4.jpg" alt="Layout Pixel Map" /></span>
+						After testing the level myself and having other people play through the level, I decided that the lower puzzle needed to be more complex and have more obstacles to challenge the player. I added a trap for the mouse after the player presses a switch, which then moves blocks around the exit the area making the way to the end much more challenging.
+						By using a spring switch, the mouse stays stuck in the single area, which then causes the blocks to move back and forth every time it loops around the block.
+					</p>
+					<p>
+						<span class="image left"><img src="itgd/Sem1/Sem1Week1_5.jpg" alt="Layout Pixel Map" /></span>
+						Once I had developed the idea, I liked what I had come up with and decided to use it for the final level. However, after conducting more playtesting I found an issue with the mouse trap I had made. The player could just call the mouse back and the moving blocks would stop, ruining the difficulty of the final part of the level. To solve this problem, I had to rearrange the bottom of the level, instead having a switch that sets off an elevator that constantly moves to hit two switches controlling the trap.
+						After I had solved this issue, I added some decorative elements to the level and uploaded the final design.
+					</p>
+					<h2>Level Playthrough Video</h2>
+					<div class="container">
+						<iframe src="https://www.youtube.com/embed/8GIm4rflZEo" title="Escape Mouse v3 Playthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
+					</div>
+					<br />
+					<p>The final level, Escape Mouse v3, is available to play online <a href="http://www.playescapegoat.com/levels/Ben%20Thompson/Escape%20Mouse%20v3">here.</a></p>
+				</div>
+			</div>
+			<ul class="alt"><li></li><li></li></ul> <!-- Line Break -->
+			<div id="Week2">
+				<div class="inner">
+					<!-- Escape Goat Level Analysis -->
+					<h1>ESCAPE GOAT LEVEL ANALYSIS</h1>
+					<p>The level I chose to analyse from Escape Goat was Frozen Cavern Level 1.</p>
+					<h3>Interactable Objects</h3>
+					<span class="image main"><img src="itgd/Sem1/Sem1Week2_1_1.jpg" alt="Interactable Objects" /></span>
+					<p>Switches that start pressed are marked in red to differentiate them from the other switches. The different switches control the movable tiles in the level.</p>
+					<h3>Tile Movement Paths</h3>
+					<span class="image main"><img src="itgd/Sem1/Sem1Week2_1_2.jpg" alt="Tile Movement Paths" /></span>
+					<h2>Level Walkthrough</h2>
+					<div class="box alt">
+						<div class="row gtr-uniform">
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week2_1_3.jpg" alt="Level Walkthrough 1" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week2_1_4.jpg" alt="Level Walkthrough 2" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week2_1_5.jpg" alt="Level Walkthrough 3" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week2_1_6.jpg" alt="Level Walkthrough 4" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week2_1_7.jpg" alt="Level Walkthrough 5" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week2_1_8.jpg" alt="Level Walkthrough 6" /></span></div>
 						</div>
 					</div>
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<p>All frameworks used in the work are owned by Staffordshire University. All rights to featured games go to their respective owners. Music used in the videos is not mine, all rights go to their respective owners.</p>
-								<h2>Follow</h2>
-								<ul class="icons">
-									<li><a href="https://ben-thompson.itch.io/" class="icon brands style2 fa-itch-io"><span class="label">itch.io</span></a></li>
-									<li><a href="https://twitter.com/BenThompson_Dev" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="www.linkedin.com/in/benjamin-thompson-dev" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="mailto:benthompson-dev@outlook.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
-									<li><a href="https://soundcloud.com/benthompson-dev" class="icon brands style2 fa-soundcloud"><span class="label">SoundCloud</span></a></li>
-									<li><a href="https://www.youtube.com/channel/UCbOKKehep2GxYI7xOWRqTjA" class="icon brands style2 fa-youtube"><span class="label">YouTube</span></a></li>
-									<li><a href="https://github.com/BenThompson-Dev" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="https://ben-thompson.bandcamp.com/" class="icon brands style2 fa-bandcamp"><span class="label">Bandcamp</span></a></li>
-								</ul>
-							</section>
-							<ul class="copyright">
-								<li>&copy; Ben Thompson. All rights reserved</li>
-								<li>Website Template Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
+					<!-- VVVVVV Level Analysis -->
+					<h1>VVVVVV LEVEL ANALYSIS</h1>
+					<p>
+						For the other level I decided to analyse, I decided to use VVVVVV. It is a platformer which has the gimmick of having the player being able to flip gravity when on the ground, and structures the game around a fixed, single-screen style camera. For the analysis of The Laboratory level, I took screenshots of the different screens that make up the level.
+						The goal is to meet up with your crewmate and then use the teleporter at the end of the level.
+					</p>
+					<p>
+						The white lines in the levels bounce the player back, flipping gravity for them. The C markers are checkpoints, and are normally spread out once per screen.
+						The enemies on this screen move from left to right and bounce back on the edges of the screen / interact with objects, and spikes are attached to walls and other objects in the level. The player needs to avoid them to get through or be sent back to their last checkpoint.
+					</p>
+					<h2>Level Walkthrough</h2>
+					<div class="box alt">
+						<div class="row gtr-uniform">
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week2_2_1.jpg" alt="Level Walkthrough 1" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week2_2_2.jpg" alt="Level Walkthrough 2" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week2_2_3.jpg" alt="Level Walkthrough 3" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week2_2_4.jpg" alt="Level Walkthrough 4" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week2_2_5.jpg" alt="Level Walkthrough 5" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week2_2_6.jpg" alt="Level Walkthrough 6" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week2_2_7.jpg" alt="Level Walkthrough 7" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week2_2_8.jpg" alt="Level Walkthrough 8" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week2_2_9.jpg" alt="Level Walkthrough 9" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week2_2_10.jpg" alt="Level Walkthrough 10" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week2_2_11.jpg" alt="Level Walkthrough 11" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week2_2_12.jpg" alt="Level Walkthrough 12" /></span></div>
 						</div>
-					</footer>
-
+					</div>
+				</div>
+			</div>
+			<ul class="alt"><li></li><li></li></ul> <!-- Line Break -->
+			<div id="Week3">
+				<div class="inner">
+					<h1>VOXEL ZONE MAPS</h1>
+					<p>
+						<span class="image left"><img src="itgd/Sem1/Sem1Week3_1.jpg" alt="First Pixel Map and Import" /></span>
+						After playing Voxel Zone's level, I recreated the entire level in a pixel map in Phootshop, then used that as a reference to import into MagicaVoxel. This simplified the process of creating the level in 3D.
+						Due to the nature of the level, I knew I would have to split the model up into the 3 different rooms.
+						<br />
+						<br />
+						Once I had it imported into the program, I built up the full level in MagicaVoxel, to show how each part of the level connects together. However, the walkthrough split them up into the original rooms like I had planned.
+					</p>
+					<br /><br /><br /><br /><br /> <!-- Aligned back to full size-->
+					<h2>Full Level Renders</h2>
+					<div class="box alt">
+						<div class="row gtr-uniform">
+							<div class="col-6"><span class="image fit"><img src="itgd/Sem1/Sem1Week3_2.jpg" alt="Level Render" /></span></div>
+							<div class="col-6"><span class="image fit"><img src="itgd/Sem1/Sem1Week3_3.jpg" alt="Level Render Side" /></span></div>
+						</div>
+					</div>
+					<h2>Level Walkthrough</h2>
+					<div class="box alt">
+						<div class="row gtr-uniform">
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week3_4.jpg" alt="Room 1 Walkthrough 1" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week3_5.jpg" alt="Room 1 Walkthrough 2" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week3_6.jpg" alt="Room 1 Walkthrough 3" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week3_7.jpg" alt="Room 2 Walkthrough 1" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week3_8.jpg" alt="Room 2 Walkthrough 2" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week3_9.jpg" alt="Room 2 Walkthrough 3" /></span></div>
+							<div class="col-12"><span class="image fit"><img src="itgd/Sem1/Sem1Week3_10.jpg" alt="Room 3 Walkthrough" /></span></div>
+						</div>
+					</div>
+					<h2>Collectables</h2>
+					<p>In the level, there are 30 collectibles for the player to collect.</p>
+					<div class="box alt">
+						<div class="row gtr-uniform">
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week3_11.jpg" alt="Room 1 Collectables" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week3_12.jpg" alt="Room 2 Collectables" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week3_13.jpg" alt="Room 3 Collectables" /></span></div>
+						</div>
+					</div>
+					<h2>Block Movement</h2>
+					<p>The blue blocks in the level move when the switches are collected, allowing for the player to progress through the level. To highlight where they move, I numbered each separate block / set of blocks that move with each switch, as well as putting arrows to point the direction that they move. Room 3 doesn't have any moving blocks.</p>
+					<div class="box alt">
+						<div class="row gtr-uniform">
+							<div class="col-6"><span class="image fit"><img src="itgd/Sem1/Sem1Week3_14.jpg" alt="Room 1 Block Movement" /></span></div>
+							<div class="col-6"><span class="image fit"><img src="itgd/Sem1/Sem1Week3_15.jpg" alt="Room 2 Block Movement" /></span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<ul class="alt"><li></li><li></li></ul> <!-- Line Break -->
+			<div id="Week4">
+				<div class="inner">
+					<h1>SKYRIM LEVEL BLOCKOUT</h1>
+					<p>The Skyrim town I chose to block out was Morthal. Because it was my first time using 3DS Max as well as my first time trying to properly make something in a 3D modelling software, the many different elements of the town would prove a good way for me to learn the different skills and learn to use 3DS Max. The blockout was made using a 2D map as a reference, I also made an annotated map of each building.</p>
+					<div class="box alt">
+						<div class="row gtr-uniform">
+							<div class="col-6"><span class="image fit"><img src="itgd/Sem1/Sem1Week4_1.jpg" alt="Morthal Render 1" /></span></div>
+							<div class="col-6"><span class="image fit"><img src="itgd/Sem1/Sem1Week4_2.jpg" alt="Morthal Render 2" /></span></div>
+							<div class="col-12"><span class="image fit"><img src="itgd/Sem1/Sem1Week4_3.jpg" alt="Morthal Annotated Render" /></span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<ul class="alt"><li></li><li></li></ul> <!-- Line Break -->
+			<div id="Week5">
+				<div class="inner">
+					<h1>PERIL CRAB LEVEL BUBBLE MAPS</h1>
+					<p>I first made a pixel map and voxel model for the crab level, which were then used as a basis for creating the bubble maps.</p>
+					<h3>Pixel and Voxel Maps</h3>
+					<div class="box alt">
+						<div class="row gtr-uniform">
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week5_1.jpg" alt="Peril Pixel Map" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week5_2.jpg" alt="Peril Voxel Map" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week5_3.jpg" alt="Peril Voxel Map 2" /></span></div>
+						</div>
+					</div>
+					<p>First, I created a very simple bubble map, and then expanded on that to create two more iterations, getting more detailed with each pass.</p>
+					<h3>Bubble Map - First Iteration</h3>
+					<span class="image main"><img src="itgd/Sem1/Week5_PerilBubbleMap_1.jpg" alt="Peril Bubble Map Iteration 1" /></span>
+					<h3>Bubble Map - Second Iteration</h3>
+					<span class="image main"><img src="itgd/Sem1/Week5_PerilBubbleMap_2.jpg" alt="Peril Bubble Map Iteration 2" /></span>
+					<h3>Bubble Map - Final Iteration</h3>
+					<span class="image main"><img src="itgd/Sem1/Week5_PerilBubbleMap_3.jpg" alt="Peril Bubble Map Iteration 3" /></span>
+					<p>Finally, I annotated the pixel and voxel map to show where each point is in the level.</p>
+					<div class="box alt">
+						<div class="row gtr-uniform">
+							<div class="col-8"><span class="image fit"><img src="itgd/Sem1/Sem1Week5_4.jpg" alt="Peril Annotated Pixel Map" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Sem1Week5_5.jpg" alt="Peril Annotated Voxel Map" /></span></div>
+						</div>
+					</div>
+					<!-- Splatoon 2 Bubble Maps-->
+					<h1>SPLATOON 2 MISSION 3 BUBBLE MAPS</h1>
+					<p>The level I chose to create bubble maps for from Splatoon 2's Hero Mode is Mission 3: Sunset Octocopter - Dash and Jump. A gameplay video is available <a href="https://youtu.be/w-azXNvoOzs?t=1006">here.</a></p>
+					<h3>Bubble Map - First Iteration</h3>
+					<span class="image main"><img src="itgd/Sem1/Week5_SplatoonBubbleMap1.jpg" alt="Splatoon 2 Bubble Map Iteration 1" /></span>
+					<h3>Bubble Map - Second Iteration</h3>
+					<span class="image main"><img src="itgd/Sem1/Week5_SplatoonBubbleMap2.jpg" alt="Splatoon 2 Bubble Map Iteration 2" /></span>
+					<h3>Bubble Map - Final Iteration</h3>
+					<span class="image main"><img src="itgd/Sem1/Week5_SplatoonBubbleMap3.jpg" alt="Splatoon 2 Bubble Map Iteration 3" /></span>
+					<!-- Super Mario Galaxy Bubble Maps-->
+					<h1>SUPER MARIO GALAXY BUBBLE MAPS</h1>
+					<p>The other game I chose to create a bubble map for is Super Mario Galaxy, and I mapped out hte first level/mission: Good Egg Galaxy's Dino Piranha. The gameplay video is available <a href="https://www.youtube.com/watch?v=NSR4qTPvKk0">here.</a></p>
+					<h3>Bubble Map - First Iteration</h3>
+					<span class="image main"><img src="itgd/Sem1/Week5_MarioBubbleMap1.jpg" alt="Splatoon 2 Bubble Map Iteration 1" /></span>
+					<h3>Bubble Map - Second Iteration</h3>
+					<span class="image main"><img src="itgd/Sem1/Week5_MarioBubbleMap2.jpg" alt="Splatoon 2 Bubble Map Iteration 2" /></span>
+					<h3>Bubble Map - Final Iteration</h3>
+					<span class="image main"><img src="itgd/Sem1/Week5_MarioBubbleMap3.jpg" alt="Splatoon 2 Bubble Map Iteration 3" /></span>
+					<p>For these bubble maps, I also annotated maps of the level, created using <a href="noclip.website">noclip.website.</a></p>
+					<div class="box alt">
+						<div class="row gtr-uniform">
+							<div class="col-7"><span class="image fit"><img src="itgd/Sem1/Sem1Week5_6.jpg" alt="Mario Annotated Map 1" /></span></div>
+							<div class="col-5"><span class="image fit"><img src="itgd/Sem1/Sem1Week5_7.jpg" alt="Mario Annotated Map 2" /></span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<ul class="alt"><li></li><li></li></ul> <!-- Line Break -->
+			<div id="Week8">
+				<div class="inner">
+					<h1>PERIL BEAT DOWN LEVEL BEATS / PACING</h1>
+					<p>Once I had played through the Peril level, I took a screenshot of the enemy kill map, and then used that as a base to create a pixel map in Photoshop. At first, I made a small pixel map of the level to get an idea of the basic layout of the level itself without any of the features put onto the map; I then adapted it into making a more detailed set of maps, highlighting all the different features of the level.</p>
+				</div>
 			</div>
 
+			<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<section>
+						<p>All frameworks used in the work are owned by Staffordshire University. All rights to featured games go to their respective owners. Music used in the videos is not mine, all rights go to their respective owners.</p>
+						<h2>Follow</h2>
+						<ul class="icons">
+							<li><a href="https://ben-thompson.itch.io/" class="icon brands style2 fa-itch-io"><span class="label">itch.io</span></a></li>
+							<li><a href="https://twitter.com/BenThompson_Dev" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://linkedin.com/in/benjamin-thompson-dev" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="mailto:benthompson-dev@outlook.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="https://soundcloud.com/benthompson-dev" class="icon brands style2 fa-soundcloud"><span class="label">SoundCloud</span></a></li>
+							<li><a href="https://www.youtube.com/channel/UCbOKKehep2GxYI7xOWRqTjA" class="icon brands style2 fa-youtube"><span class="label">YouTube</span></a></li>
+							<li><a href="https://github.com/BenThompson-Dev" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://ben-thompson.bandcamp.com/" class="icon brands style2 fa-bandcamp"><span class="label">Bandcamp</span></a></li>
+						</ul>
+					</section>
+					<ul class="copyright">
+						<li>&copy; Ben Thompson. All rights reserved</li>
+						<li>Website Template Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+		</div>
 		<!-- Scripts -->
-			<script src="../assets/js/jquery.min.js"></script>
-			<script src="../assets/js/browser.min.js"></script>
-			<script src="../assets/js/breakpoints.min.js"></script>
-			<script src="../assets/js/util.js"></script>
-			<script src="../assets/js/main.js"></script>
-
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/browser.min.js"></script>
+		<script src="../assets/js/breakpoints.min.js"></script>
+		<script src="../assets/js/util.js"></script>
+		<script src="../assets/js/main.js"></script>
 	</body>
 </html>
