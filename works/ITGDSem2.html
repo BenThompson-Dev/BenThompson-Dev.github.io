@@ -213,12 +213,57 @@
 						<br /><br />
 						<span class="image right"><img src="itgd/Sem2/Week5_Excel2.jpg" alt="Excel Screenshot 2" /></span>
 						This showed that I would need to adjust more of the values than just one to get the desired result I was looking for, as the precision of the variables is only to 1 decimal place. Thus, I decided to go against my original judgement and just experiment with the different variables.
+						<br /><br />
 						<span class="image left"><img src="itgd/Sem2/Week5_Excel3.jpg" alt="Excel Screenshot 3" /></span>
 						Because the spawn rate being decreased was getting me closer to the 30 seconds I needed to get, I decided to try and see if the current variables would get me there by just decreasing the spawn rate incrementally.
+						<br /><br />
 						<span class="image right"><img src="itgd/Sem2/Week5_Excel4.jpg" alt="Excel Screenshot 4" /></span>
 						Because the value was now so close to the desired value, I wanted to try and tweak some of the other variables to hopefully get within the range (each change is sequential, i.e. the reload speed changes occurred with the final enemy speed value etc.)
 					</p>
 					<h3>30 Seconds Simulation</h3>
+					<div class="container">
+						<iframe src="https://www.youtube.com/embed/IW2Pc-Kke5E" title="30 Seconds Balance Simulation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
+					</div>
+					<p>
+						<br /><br />
+						<span class="image left"><img src="itgd/Sem2/Week5_Excel5.jpg" alt="Excel Screenshot 5" /></span>
+						After this, I needed to change the stats to get 50s. Firstly, I decided to try decreasing the turret reload speed, and seeing how that affects the time value.
+						<br /><br />
+						<span class="image right"><img src="itgd/Sem2/Week5_Excel6.jpg" alt="Excel Screenshot 6" /></span>
+						I decided to update the enemy HP to allow some more to go through, potentially getting the time to be at 50s, and then alter some of the other values to focus in on the time.
+						<br /><br />
+						Because enemy speed being set to 0.7 was much closer to 50s, I reverted to those values and tweaked from there. I individually changed every value apart from the speed to see if it got me closer to 50s, however they were adjusting way too much.
+						<br /><br />
+						<span class="image left"><img src="itgd/Sem2/Week5_Excel7.jpg" alt="Excel Screenshot 7" /></span>
+						Once I had gotten this far, progress had started to stagnate. I decided that because I seemed to be taking quite a while getting to 50s, I would just experiment with changing the different values instead of actually recording them, and I eventually landed on a setup that got me to 50s (±0.5). The approach of the stats layout is to have the turrets be slowly overwhelmed by ships, and have them become unable to stop some from coming through.
+					</p>
+					<h3>50 Seconds Simulation</h3>
+					<div class="container">
+						<iframe src="https://www.youtube.com/embed/vS3acg8qJgs" title="30 Seconds Balance Simulation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
+					</div>
+					<br /><br />
+					<h3>Baseline Stats</h3>
+					<p>For my baseline stats, I decided to aim for around 30 seconds, but have the values be much more "centered" and not have some of the variables be in the extremes (like the spawning in my 30 and 50 second simulations).</p>
+					<div class="container">
+						<iframe src="https://www.youtube.com/embed/BvgKtqXTIG8" title="30 Seconds Balance Simulation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
+					</div>
+					<br />
+					<p>To make sure it was repeatable, I took 3 separate time values. After seeing they were all within a very close range to each other, I averaged them out to have a single time value.</p>
+					<p>Recorded Times: 31.666s, 31.656s, 31.655s
+					<br />
+					<b>Average Time: 31.659s</b></p>
+					<p>The variables that I chose to change and graph from this baseline set are the Turret Reload Speed and Enemy Speed.</p>
+					<h2>Turret Reload Speed Graph</h2>
+					<span class="image fit"><img src="itgd/Sem2/Week5_TurretReloadGraph.jpg" alt="Turret Reload Speed Graph" /></span>
+					<h2>Enemy Speed</h2>
+					<p>For the enemy speed value of 0.1, I ultimately ended the simulation even though there was slight progress being made by the enemies. Because the length of time would make it virtually ungraphable, I left it as it was and just took the value as being higher than that of 0.2. Also because of the more extreme values at the lowest enemy speed values, I made two separate graphs with one excluding these values.</p>
+					<div class="box alt">
+						<div class="row gtr-uniform">
+							<div class="col-2"><span class="image fit"><img src="itgd/Sem2/Week5_EnemySpeedTable.jpg" alt="Enemy Speed Table" /></span></div>
+							<div class="col-5"><span class="image fit"><img src="itgd/Sem2/Week5_EnemySpeedGraph.jpg" alt="Enemy Speed Graph" /></span></div>
+							<div class="col-5"><span class="image fit"><img src="itgd/Sem2/Week5_EnemySpeedGraph2.jpg" alt="Enemy Speed Graph (highest values omitted)" /></span></div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<!-- Footer -->
