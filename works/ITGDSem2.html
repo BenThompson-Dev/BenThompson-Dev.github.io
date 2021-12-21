@@ -204,7 +204,7 @@
 					<!-- Balance Graphs -->
 					<h1>BALANCE SIMULATION</h1>
 					<h3>Skills: GAME BALANCE AND TESTING | ENGINE: UNREAL ENGINE 4</h3>
-					<p>This week, I was given the Balance Simulation tech demo and had to use the brute force analysis to get the simulation to run for 30 seconds, 50 seconds and find a decent baseline that's not too short or long, then create balance graphs for two separate variables.</p>
+					<p>This week, I was given the Balance Simulation tech demo and had to use the brute force analysis to get the simulation to run for 30 seconds, 50 seconds (both ±0.5s) and find a decent baseline that's not too short or long, then create balance graphs for two separate variables.</p>
 					<p>
 						After opening the simulation and getting to grips with how it worked, I first tried to find a solution that took 30 seconds to end. I decided to focus in on brute force balancing one variable to make it a bit easier for myself, instead of spending a long time blindly changing values and not having a good idea on how they affect the simulation.
 						<br /><br />
@@ -213,7 +213,12 @@
 						<br /><br />
 						<span class="image right"><img src="itgd/Sem2/Week5_Excel2.jpg" alt="Excel Screenshot 2" /></span>
 						This showed that I would need to adjust more of the values than just one to get the desired result I was looking for, as the precision of the variables is only to 1 decimal place. Thus, I decided to go against my original judgement and just experiment with the different variables.
+						<span class="image left"><img src="itgd/Sem2/Week5_Excel3.jpg" alt="Excel Screenshot 3" /></span>
+						Because the spawn rate being decreased was getting me closer to the 30 seconds I needed to get, I decided to try and see if the current variables would get me there by just decreasing the spawn rate incrementally.
+						<span class="image right"><img src="itgd/Sem2/Week5_Excel4.jpg" alt="Excel Screenshot 4" /></span>
+						Because the value was now so close to the desired value, I wanted to try and tweak some of the other variables to hopefully get within the range (each change is sequential, i.e. the reload speed changes occurred with the final enemy speed value etc.)
 					</p>
+					<h3>30 Seconds Simulation</h3>
 				</div>
 			</div>
 			<!-- Footer -->
