@@ -1,0 +1,251 @@
+﻿<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Blaster Framework Design Documentation - Ben Thompson</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<div class="inner">
+
+					<!-- Logo -->
+					<a href="../index.html" class="logo">
+						<span class="title">Ben Thompson</span>
+						<!--<span class="icon brands style1 fa-dev"></span>-->
+					</a>
+
+					<!-- Nav -->
+					<nav>
+						<ul>
+							<li><a href="#menu">Menu</a></li>
+						</ul>
+					</nav>
+
+				</div>
+			</header>
+
+			<!-- Menu -->
+			<nav id="menu">
+				<h2>Menu</h2>
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../portfolio.html">Portfolio</a></li>
+					<li><a href="../music.html">Music</a></li>
+					<li><a href="introgamesdesign.html">Introduction to Games Design</a></li>
+				</ul>
+			</nav>
+
+			<!-- Page Header -->
+			<div id="pageHeader">
+				<div class="inner">
+					<span class="image main"><img src="itgd/ITGD.jpg" alt="Introduction to Games Design" /></span>
+					<h1>BLASTER FRAMEWORK DESIGN DOCUMENTATION</h1>
+					<p>Blaster Framework is a basic top-down shooter Unreal Engine 4 framework where the player controls a tank, and has to defeat all the enemies to get to the end of the level. Using the framework, I had design a level, blocking it out using 3DS Max and then importing it into the game.</p>
+					<p>The design documentation below is a formatted, revised version of the work I submitted as part of the first semester of the module.</p>
+					<h2>Skills: Level Design | Engine: Unreal Engine 4</h2>
+				</div>
+			</div>
+			<!-- Level Planning and Blockout -->
+			<div id="main">
+				<div class="inner">
+					<h1>LEVEL PLANNING / DESIGN</h1> <!-- Level Planning -->
+					<p>
+						<span class="image left"><img src="itgd/Sem1/Week6_BlasterTesting.jpg" alt="Blaster Framework Testing" /></span>
+						The first thing I did to start working on planning out my blaster level was to experiment in the framework and learn the functionality of the different elements, particularly the different enemy types. It also helped me to get a grasp on how the tank controlled, allowing me to better design the level around the controls of the level.
+						<br /><br />
+						I began to quickly brainstorm some ideas in the limitations of the framework. I knew I couldn't have any changes in height as it would cause camera issues, and I also set myself the limitation of not increasing the size of the default plane, to stop the level from becoming overly big.
+					</p>
+					<p>To help generate ideas for the level, I first looked at the player speed to give me an idea of what I scale I should be working within. After some timing, I determined that they move through one of the 200-unit square in just under a second. After that, I decided which enemies would be the most ‘deadly’ to the player to allow for better placement and difficulty scaling through the level.</p>
+					<p>To start with, I quickly sketched down some basic level ideas in Photoshop as a pixel map, imagining how I might want to have the level fully designed when transitioning into 3DS Max. The original design I created was made up of multiple smaller rooms connected by corridors, similar to how the level was laid out in the Peril level. I highlighted the map in red where I thought potential enemy locations could be. After thinking over the design for a while, I decided to create a level layout that was shaped more interestingly and had more interesting features than just square rooms.</p>
+					<p>For my second design, I took elements from the first one, keeping some of the room designs. I reiterated the shaping of the level looping around in a sideways U-shape, but instead I created a spiral so the level fully looped in on itself. I also shaped some of the areas such that not everything was completely squared to the grid. Because I will be greyboxing out the level in 3DS Max, it allows me to create more interesting designs to the level, and add some more unique features to the level. After creating the pixel map, the final change came when I realised I needed to rotate the whole level by 90° so the tank can start with the correct rotation. Finally, before moving into 3DS Max, I quickly created a bubble map for how I originally wanted the level to flow. It was useful to have as it allowed me to structure my ideas better, and was a useful comparison tool when the level itself was finished.</p>
+					<p>On the pixel maps, the black represents walls, red represents enemies, and the yellow and green are the start and end respectively.</p>
+					<h4>Pixel Map Ideas</h4>
+					<div class="box alt">
+						<div class="row gtr-uniform">
+							<div class="col-6"><span class="image fit"><img src="itgd/Sem1/Week6_PixelMap1.jpg" alt="Pixel Map Idea 1" /></span></div>
+							<div class="col-6"><span class="image fit"><img src="itgd/Sem1/Week6_PixelMap2.jpg" alt="Pixel Map Idea 2" /></span></div>
+						</div>
+					</div>
+					<h4>Level Bubble Map</h4>
+					<span class="image fit"><img src="itgd/Sem1/Week6_BubbleMap.jpg" alt="Bubble Map" /></span>
+					<h2>3DS Max Blockout</h2> <!-- 3DS Max Blockout -->
+					<p>Firstly in Max, I wanted to create a basic layout for the first few rooms and import them into UE4 to get a better sense of the scale I’d be working with and make sure I was having no issues moving the assets between the two software. Thus, I put together a few basic shapes somewhat resembling my design and imported them into the UE4 project.</p>
+					<h4>Testing Blockout in 3DS Max and Unreal Engine 4</h4>
+					<div class="box alt">
+						<div class="row gtr-uniform">
+							<div class="col-5"><span class="image fit"><img src="itgd/Sem1/Week6_TestBlockout3DSMax.jpg" alt="Test Blockout in 3DS Max" /></span></div>
+							<div class="col-7"><span class="image fit"><img src="itgd/Sem1/Week6_TestBlockoutUE4.jpg" alt="Test Blockout in UE4" /></span></div>
+						</div>
+					</div>
+					<p>After some quick playtesting, I found the level scaling from the original plan to work well in-engine, as there is enough room to have enemy fights while not being too large such that the player cannot see anything. Thus, I hid the two test objects from view and began to work on the first proper iteration of my level in Max, considering opportunities to tweak and change parts of the design with me longer being confined to the pixel grid. To give myself a better reference, I created a new plane that had the level pixel map as a material so I could have an image reference to work from. So I could actually build the level easier, I decided to break up the level into multiple parts allowing for changes to be made where needed and to avoid mistakes needing me to restart the process over again.</p>
+					<p>After spending some time building the blockout of my plan in 3DS Max, I had the assets ready to import into UE4, allowing me to start adding in the enemies and playtesting my level design.</p>
+					<div class="box alt">
+						<div class="row gtr-uniform">
+							<div class="col-5"><span class="image fit"><img src="itgd/Sem1/Week6_Blockout13DSMax.jpg" alt="Level Blockout in 3DS Max" /></span></div>
+							<div class="col-7"><span class="image fit"><img src="itgd/Sem1/Week6_Blockout1UE4.jpg" alt="Level Blockout in UE4" /></span></div>
+						</div>
+					</div>
+					<p>At first, I added enemies into the areas I had marked out on the pixel map, just to test their positioning in the level. For playtesting purposes, I activated the framework's telemetry system to get an idea of how the gameplay was flowing.</p>
+					<h3>Level Iteration 1</h3>
+					<span class="image fit"><img src="itgd/Sem1/Week6_LevelIteration1.jpg" alt="Level Iteration 1" /></span>
+					<h2>Iteration 1 Analysis</h2>
+					<p>After multiple playthroughs of the first iteration of my level, I found the level to be quite challenging in certain places, particularly due to enemy placement; I found myself dying multiple times while trying to get through the level.</p>
+					<div class="box alt">
+						<div class="row gtr-uniform">
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Week6_Iteration1Telemetry1.jpg" alt="Level Telemetry 1" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Week6_Iteration1Telemetry2.jpg" alt="Level Telemetry 2" /></span></div>
+							<div class="col-4"><span class="image fit"><img src="itgd/Sem1/Week6_Iteration1Telemetry3.jpg" alt="Level Telemetry Player Path" /></span></div>
+						</div>
+					</div>
+					<p>The telemetry of my level gives a better insight into how the level is playing, and what might need to be changed about it. The first glaring issue is the concentration of activity on the left with the large black spot. In my original pixel map plans, I placed multiple enemies around this point, to act as a sorts of midpoint challenge for the player, before moving on to the rest of the level and the final battle before the level end. However, this proved to make that part of the level too concentrated in activity, affecting the pacing of the level.</p>
+					<p>In my next iteration of the level design, I’ll change the enemy placement to make it easier for the player and to better space out the spots throughout the level to avoid long sections of nothing happening for the player. By altering the design of the level this way, it will help to get rid of my fears of the level being too large, as the player is given more to do in the level itself. To do this, I want to alter the designs of the ‘rooms’ to have them better accommodate enemies such that it improves the level’s pacing. For example, with the first room (the one on the right) I want to shrink it slightly to give the player a better view of the entire level, and I also want to add some features in the room itself like walls to cover behind, helping to break up the design and make the room more interesting while showing the player that they can hide behind cover to avoid being hit by enemies.</p>
+					<p>To try and alleviate the difficulty issues some parts of the level have, I’m going to change the types and placements of some of the enemies. Right now, I make use of 3 of the lightning enemies which I find the hardest enemy type to deal with by far, so my plan is to only use the one in the final room as a final challenge for the player to overcome at the end of the level.</p>
+					<h1>LEVEL ITERATION 2</h1> <!-- Iteration 2 -->
+					<p>With my approach to creating this iteration, I decided to have the newer parts I added more adhere to the grid, putting more of a focus onto the gameplay side rather than the more decorative approach that I'll switch to once I’m happy with how the level plays.</p>
+					<p>One idea I came up with to present the player with a harder level should they want it was to have a lightning enemy available as an optional challenge, set up as a branching path. It helps to make the level design more interesting as the entire level isn't just one straight path to the end, and it allows the player to choose the challenge they want. To get the circle right, I mapped out the range of the lightning enemy in relation to the pixel map, and then created some covers and walls around the enemy. The lightning enemy is one that is very difficult to safely take down, so it works especially well for this sort of optional challenge.</p>
+					<p>To avoid getting another black dot on the telemetry of my level, I changed the design through the corridor to give more spots to spread out enemy placement, pacing the level better while still keeping the challenge of that portion of the level. I made use of some enemies further up the corridor, having them embedded in the walls so that the player isn't overwhelmed by shooting straight away.</p>
+					<p>
+						<span class="image left"><img src="itgd/Sem1/Week6_LightningEnemyRange.jpg" alt="Lightning Enemy Range" /></span>
+						To alter the design of the final room, I used to cover to split it into ‘sections’ to focus the player on set enemies at a time and cut down the large empty spaces the room had in the first iteration. As it is the final part of the level, I wanted to force the player to fight the lightning enemies; to do so I made use of the covers I had made for the optional fight and repurposed them to block the player from going around the attack radius of the enemy. To start, I reused the border I’d created that signals the range of the lightning enemy, and reused the tank reference to show the position the enemy will be in. To start with, I just plan to place cover as a border for the range, but I’ll add more cover options should I still find it too difficult to fight.
+						<br /><br />
+						After putting together all the elements that I wanted to change in the 3DS Max blockout, I imported it into UE4 and gave the level some more playtesting, paying attention to see how my changes had affected the level.
+						<br /><br />
+					</p>
+					<h3>Level Iteration 2</h3>
+					<div class="box alt">
+						<div class="row gtr-uniform">
+							<div class="col-5"><span class="image fit"><img src="itgd/Sem1/Week6_Blockout23DSMax.jpg" alt="Level Iteration 2 in 3DS Max" /></span></div>
+							<div class="col-7"><span class="image fit"><img src="itgd/Sem1/Week6_Blockout2UE4.jpg" alt="Level Iteration 2 Blockout in UE4" /></span></div>
+						</div>
+					</div>
+					<p>To hide the first iteration I made, I put them on a sublevel that is set to activate only by blueprint, meaning that none of the original level is actually generated upon play. The first thing I did after importing into UE4 was test the lightning covers, to make sure they were working as I intended them to. The first, optional one worked as intended and only activated once the player went within the borders of it. However, the second one needs to be altered, as the lightning ignores any cover in its path. Because I shrank the border slightly to try and create an effect of the lightning continuing through the gaps, it will need to be extended similarly to the one in the optional fight.</p>
+					<p>
+						<span class="image right"><img src="itgd/Sem1/Week6_UtilityBoxes.jpg" alt="Utilities Boxes" /></span>
+						After this, I placed the enemies in how I wanted them to go. To signify how enemies react to the player, I want to make it obvious how large each enemy’s range is the first time the player encounters one of each type. For the lightning enemies, I already have the borders in place. Because I am using the machine guns as the first enemy the player encounters (as they are what I find to be the weakest of the three in the framework), I set up the first obstacle in a way that uses the affordance meshes to clue the player on what is going to happen in the level.
+						<br /><br />
+						The utility boxes act as danger signs, which are put at the end of the enemy’s detection range. As I am moving up into the screen to start with, I had to use the machine gun as the screen affordance means that the rocket enemy wouldn’t be visible before it starts shooting at the player.
+					</p>
+					<h2>Iteration 2 Analysis</h2> <!-- Iteration 2 Analysis -->
+					<p>
+						<span class="image left"><img src="itgd/Sem1/Week6_Iteration2Telemetry.jpg" alt="Iteration 2 Telemetry" /></span>
+						The second iteration shows much more balanced gameplay pacing and helps to show the scale of combat increasing as the player progresses through the level. To help combat the difficulty issues, I changed around the enemy placement meaning that I can now play through the level without dying. It also shows how the previous large block spot on the map has been split up into multiple smaller points scattered throughout that section of the level. By breaking up different elements of the level and spreading them out, it also made the gameplay more enjoyable for me as there was more variation in the way enemies were presented and scenarios were created.
+						<br /><br />
+						The first room is left empty so that the player has a chance to learn the basic controls of the game before having to put it into action with an enemy encounter; I specifically left the first enemy encounter with only a few enemies to give the player a chance to first understand the mechanics and how two of the three enemies (machine gun and rocket) work before encountering them in multiple different scenarios. The cover also helps to show the player how the rocket enemy attacks before getting into their attack range; their radius is so large that if this wasn't done the player would be shot at before the enemy is actually visible.
+						<br /><br />
+						For my final iteration, I plan to tweak the design changes that need to be made pertaining to cover for the player in the final section, and also want to refine the level’s design. For the section in the top right, I want to include another enemy to be fought along the corridor to add another point, and potentially add a handful more enemies into the area around the first corner to engage the player more. Another change I will test in the final iteration is adding some more enemies into the very end of the final room, to help give it a larger feeling of one last challenge before the player can finish the level.
+					</p>
+					<h1>FINAL LEVEL ITERATION</h1> <!-- Final Level Iteration -->
+					<p>To put together the final iteration, I changed out the parts I wanted to tweak in the level and added some extra design features, as well as then going over every object to have them properly aligned to the grid. Even though I originally wanted to give the level a more free-flowing and less rigid design, I feel like it helps to assist the gameplay as the edges of everything are very well-defined to the player, letting them see everything they need to and not affecting their ability to read the level with weirdly designed walls.</p>
+					<p>After making some of the changes to the design and enemy placement, the telemetry now more accurately reflects the major points in the level, with the final room having the most prominence on the map. I also feel like the sections with no enemies work effectively, as they give the player a chance to take a break from constant action and work to better emphasise the bigger challenges in the level.</p>
+					<div class="box alt">
+						<div class="row gtr-uniform">
+							<div class="col-7"><span class="image fit"><img src="itgd/Sem1/Week6_Blockout3UE4.jpg" alt="Final Level Iteration" /></span></div>
+							<div class="col-5"><span class="image fit"><img src="itgd/Sem1/Week6_Iteration3Telemetry.jpg" alt="Final Iteration Telemetry" /></span></div>
+						</div>
+					</div>
+					<p>Because I feel like my level is at a point where the design itself is complete, I turned my focus to affordance in the level, both with what the camera is showing the player, as well as using meshes to subtly indicate to the player what to do. The first thing I did was play through the level again, properly taking note of what was in view of the camera, and if I was doing anything purely on me already knowing where to go.</p>
+					<h1>AFFORDANCE DESIGN</h1> <!-- Affordance Design -->
+					<p>Based on the way the level is designed as mostly one singular path that spirals in on itself, the player doesn’t really have an opportunity to get lost. For example, when the player begins to move down their view area is a lot smaller than any other direction. So, with some use of affordance meshes in the blockout, I can signal to the player where danger is before they get to it, avoiding them being shot at off screen, taking them by surprise.</p>
+					<p>The first thing I did was to play through the level and note places that would benefit from using the framework's affordance meshes to help guide the player and signal information to them. The first places I found are these corners, that are big enough that the player can't see around them, and could potentially move blindly into enemies.</p>
+					<div class="box alt">
+						<div class="row gtr-uniform">
+							<div class="col-6"><span class="image fit"><img src="itgd/Sem1/Week6_AffordanceCorner3.jpg" alt="Affordance Corner 1" /></span></div>
+							<div class="col-6"><span class="image fit"><img src="itgd/Sem1/Week6_AffordanceCorner4.jpg" alt="Affordance Corner 2" /></span></div>
+							<div class="col-6"><span class="image fit"><img src="itgd/Sem1/Week6_AffordanceCorner1.jpg" alt="Affordance Corner 3" /></span></div>
+							<div class="col-6"><span class="image fit"><img src="itgd/Sem1/Week6_AffordanceCorner2.jpg" alt="Affordance Corner 4" /></span></div>
+						</div>
+					</div>
+					<p>
+						One particular area I used meshes to signify what to do to the player is where the path splits for the optional fight with the lightning enemy. Before, when the player reached this section they may become confused on where it is they’re supposed to go.
+						I made use of the utility boxes to act as signposts to show that the bottom area is the less dangerous of the two. I didn’t want to use green trees in this scenario as that would show the area being safe, instead opting to use yellow domes that still show the player that going around is their better option.
+					</p>
+					<div class="box alt">
+						<div class="row gtr-uniform">
+							<div class="col-6"><span class="image fit"><img src="itgd/Sem1/Week6_SplitPathBefore.jpg" alt="Split Path Before" /></span></div>
+							<div class="col-6"><span class="image fit"><img src="itgd/Sem1/Week6_SplitPathAfter.jpg" alt="Split Path After" /></span></div>
+						</div>
+					</div>
+					<p>
+						For the leadup to the final room, the player can be shot at before they even enter the room and see the enemies. Thus, I needed to make sure that the danger was communicated to the player, but not present it in a way so that the player wouldn’t go into the room at all. Therefore, I decided to only use 2 of the spiky balls to signal at what distance the player would start being shot at.
+					</p>
+					<h2>Full Level Affordance</h2>
+					<span class="image fit"><img src="itgd/Sem1/Week6_FullLevelAffordance.jpg" alt="Full Level Affordance" /></span>
+					<p>Overall, I just used the affordance meshes in specific places to guide the player through specific sections of the level. Because the level itself is a spiral, it means that most of the level is already fairly self-explanatory when it comes to traversal, as there is only one direction the player can go. However, I have used it to highlight specific areas of interest for the player, such as using the spiky balls to communicate the split section to the player, and having them denote the start of the final room.</p>
+					<p>
+						Because my level is now completed in UE4, I'm now going to create a revised set of bubble maps which has all the gameplay changes I made present in it, and make some maps of the finished product in Photoshop.
+					</p>
+					<h1>BUBBLE MAPS</h1>
+					<h2>Iteration 1</h2>
+					<span class="image fit"><img src="itgd/Sem1/Week6_FinalBubbleMap1.jpg" alt="Bubble Map Iteration 1" /></span>
+					<h2>Iteration 2</h2>
+					<span class="image fit"><img src="itgd/Sem1/Week6_FinalBubbleMap2.jpg" alt="Bubble Map Iteration 2" /></span>
+					<h2>Final Iteration</h2>
+					<span class="image fit"><img src="itgd/Sem1/Week6_FinalBubbleMap3.jpg" alt="Bubble Map Final Iteration" /></span>
+					<p>Comparing these bubble maps to the original one I made, it shows how the overall design and shape of the level has remained intact, but many changes have been made to improve the way it plays; I also added more detail into individual sections as the level became more fleshed out from my original ideas. The most notable changes have happened in the top section of the level, with that entire section being changed out from the original design to the final version. Some elements of the original design were moved, notably the winding pathway going from the top of the level to the bottom of the level.</p>
+					<h1>LEVEL MAPS</h1>
+					<h2>Base Map</h2>
+					<span class="image fit"><img src="itgd/Sem1/Week6_BlasterMapBase.jpg" alt="Base Level Map" /></span>
+					<h2>Enemies & Critical Path Maps</h2>
+					<div class="box alt">
+						<div class="row gtr-uniform">
+							<div class="col-6"><span class="image fit"><img src="itgd/Sem1/Week6_BlasterMapEnemies.jpg" alt="Level Enemies Map" /></span></div>
+							<div class="col-6"><span class="image fit"><img src="itgd/Sem1/Week6_BlasterMapCriticalPath.jpg" alt="Level Critical Path Map" /></span></div>
+						</div>
+					</div>
+					<h1>FINAL LEVEL PLAYTHROUGH VIDEO</h1>
+					<div class="container">
+						<iframe src="https://www.youtube.com/embed/xIANPmCLqcY" title="Blaster Framework Level" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
+					</div>
+					<br /><br />
+					<p><a href="introgamesdesign.html" class="button primary fit">Back to Introduction to Games Design Page</a><p>
+				</div>
+			</div>
+			<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<section>
+						<p>The Blaster Framework used in the work are owned by Staffordshire University
+						<br />
+						Music used in the final demo video is from Sonic Riders, all rights go to SEGA.</p>
+						<h2>Follow</h2>
+						<ul class="icons">
+							<li><a href="https://ben-thompson.itch.io/" class="icon brands style2 fa-itch-io"><span class="label">itch.io</span></a></li>
+							<li><a href="https://twitter.com/BenThompson_Dev" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="www.linkedin.com/in/benjamin-thompson-dev" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="mailto:benthompson-dev@outlook.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="https://soundcloud.com/benthompson-dev" class="icon brands style2 fa-soundcloud"><span class="label">SoundCloud</span></a></li>
+							<li><a href="https://www.youtube.com/channel/UCbOKKehep2GxYI7xOWRqTjA" class="icon brands style2 fa-youtube"><span class="label">YouTube</span></a></li>
+							<li><a href="https://github.com/BenThompson-Dev" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://ben-thompson.bandcamp.com/" class="icon brands style2 fa-bandcamp"><span class="label">Bandcamp</span></a></li>
+						</ul>
+					</section>
+					<ul class="copyright">
+						<li>&copy; Ben Thompson. All rights reserved</li>
+						<li>Website Template Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
