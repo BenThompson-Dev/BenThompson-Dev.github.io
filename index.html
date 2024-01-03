@@ -39,8 +39,8 @@
 					<nav id="menu">
 						<h2>Menu</h2>
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="portfolio.html">Portfolio</a></li>
+							<li><a href="javascript:undefined">Main</a></li>
+							<li><a href="allworks.html">All Works</a></li>
 							<li><a href="music.html">Music</a></li>
 						</ul>
 					</nav>
@@ -51,9 +51,9 @@
 							<header>
 								<span class="image main"><img src="images/HeaderBanner.png" alt="Ben Thompson" /></span>
 								<p>
-									<span class="image right"><img src="images/profilepicture.jpg" alt="" /></span>Hi! I'm Ben Thompson, a 2nd year Computer Games Design and Programming Student at Staffordshire University. I have experience in games design as well as games programming, having experience using C# in Unity and the blueprint system in Unreal Engine 4 both inside and outside my university assignments. I have a keen passion for games and have taken part in multiple game jams on top of my university projects.<br /><br />
+									<span class="image right"><img src="images/profilepicture.jpg" alt="" /></span>Hi! I'm Ben Thompson, a Final Year Computer Games Design and Programming Student at Staffordshire University. I have experience in games programming as well as design, having taken a year-long placement role and gained industry experience using Unity and C# for both PC and console development, as well as the blueprint system in Unreal Engine 4 during my studies. I have a keen passion for games and have taken part in multiple game jams on top of my existing work.<br /><br />
 									I also have a strong passion for composing, and write music in my spare time, as well as incorporating it into my projects in various ways.<br /><br />
-									Currently, I'm working on my second year university modules: making a rhythm top-down shooter in Unity, developing a local multiplayer parkour prototype using UE4's blueprint and building a basic physics engine using C++ and DirectX.
+									Currently, I'm working on my final year university modules: investigating procedural generating race tracks for my dissertation project, and creating a multiplayer network game prototype.
 								</p>
 						</header>
 
@@ -68,219 +68,104 @@
 							<li><b>Music Composition</b></li>
 						</ul>
 
-						<a href="portfolio.html" class="button primary fit" style="font-size:1.5em">My Portfolio</a>
+						<!-- Portfolio Header -->
+						<div id="portfolio_header">
+							<div class="inner">
+								<h1>PORTFOLIO</h1>
+							</div>
+						</div>
+						<ul class="alt"><li></li><li></li></ul>
+						<!-- Fish Shift -->
+						<div id="FishShift">
+							<div class="inner">
+								<h1>FISH SHIFT</h1>
+								<span class="image main"><img src="images/FishShift.jpg" alt="Fish Shift" /></span>
+								<h2>Gameplay Programming, Game, Technical, Level & UX Design</h2>
+								<p>As part of the first semester of the <i>Advanced 3D Games Engines and Scripting</i> module, I created a fish puzzle game using Unreal Engine 4's blueprint system. In the project, each fish has it's own ability and the player needs to swap between them to get through the challenges in the level.</p>
+								<p>I worked on this project on my own, using royalty-free assets and designing the gameplay and technical aspect, as well as doing all the blueprint scripting, including implementing a system to easily manage character abilities. I also put time into polishing the experience, focusing on tweaking the design and adding features/UI elements to improve the user experience.</p>
+								<p>The game prototype is available to <a href="https://ben-thompson.itch.io/fish-shift">play now on itch.io.</a></p>
+								<h3>Project Presentation Video:</h3>
+								<div class="container">
+									<iframe src="https://www.youtube.com/embed/NRrpK7SDgao" title="Piccadilly Potteria Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
+								</div>
+								<br />
+							</div>
+						</div>
+						<ul class="alt"><li /><li /></ul>
+						<!-- Shifty 8s -->
+						<div id="Shifty8s">
+							<div class="inner">
+								<h1>SHIFTY 8s</h1>
+								<h2>Major Jam 4: Cosmic</h2>
+								<span class="image main"><img src="images/Shifty8s.jpg" alt="Shifty 8s" /></span>
+								<h2>Gameplay Programming, Music</h2>
+								<p>In a team, I took part in <em>Major Jam 4: Cosmic</em> and helped work on a card game called Shifty 8s. With the limitation of the game jam being that the player had to cheat, we implemented a feature involving the player removing cards from their hand when the enemy AI isn't looking. The whole project took place over the span of a week, and was built in Unity using C#.</p>
+								<p>The main role I took in the game jam team was programming the systems and gameplay mechanics, as well as implementing the AI logic so that it would interact with the game itself. I also assisted with the design of the cheating mechanic, as well as composing the music for the game.</p>
+								<p>The game can be downloaded through its <a href="https://ben-thompson.itch.io/shifty-8s">itch.io page.</a></p>
+								<h3>Gameplay Video:</h3>
+								<div class="container">
+									<iframe src="https://www.youtube.com/embed/rKLITrdXw08" title="SHIFTY 8s Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
+								</div>
+								<br />
+							</div>
+						</div>
+						<ul class="alt"><li></li><li></li></ul>
+						<!-- Piccadilly Potteria -->
+						<div id="PiccadillyPotteria">
+							<div class="inner">
+								<h1>PICCADILLY POTTERIA</h1>
+								<h2>Stoke on TREND Games Jam 2021</h2>
+								<span class="image main"><img src="images/PiccadillyPotteria.jpg" alt="Piccadilly Potteria" /></span>
+								<h2>Game Design, Gameplay Programming, Music</h2>
+								<p>As part of a collaboration between Staffordshire University and Stoke-on-Trent City Centre BID, in a team I took part in the <em>Stoke on TREND Games Jam 2021</em>, in which we worked on a project themed around Piccadilly Street in the town centre. Taking influence from the area's rich pottery history, as a team we designed a game based around moulding pottery based on requests and selling it, theming the game around being set in an old pizzeria. The project was developed over the span of 5 days, and was developed using Unreal Engine 4's blueprint system.</p>
+								<p>For the game, I helped design the gameplay systems, programmed the sculpting system, built the system that checked how close the player was to the request and handling generating the new requests based on different preset shapes. I also co-ordinated the team through the development of the project and composed the music tracks that were used in the game.</p>
+								<p>The game can be downloaded through its <a href="https://ben-thompson.itch.io/piccadilly-potteria">itch.io page.</a></p>
+								<h3>Gameplay Video:</h3>
+								<div class="container">
+									<iframe src="https://www.youtube.com/embed/OF_4E43p604" title="Piccadilly Potteria Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
+								</div>
+								<br />
+							</div>
+						</div>
+						<ul class="alt"><li /><li /></ul>
+						<!-- Rabbids Coding Level Design Challenge -->
+						<div id="RabbidsCoding">
+							<div class="inner">
+								<h1>RABBIDS CODING! LEVEL DESIGN CHALLENGE</h1>
+								<h2>Winner</h2>
+								<span class="image main"><img src="images/RabbidsCoding_DesignChallenge.jpg" alt="Rabbids Coding Level Design Challenge" /></span>
+								<h2>Level Design</h2>
+								<p>As part of an opportunity with <a href="https://news.ubisoft.com/en-us/article/Dfqduv3oubgphefbb7R54/rabbids-coding-adds-winning-designcompetition-levels-and-new-languages">Ubisoft and Bibliothèque Sans Frontières</a>, I designed a level for Rabbids Coding. The final level was submitted and tested by a team at Ubisoft, and was ultimately one of the 8 levels to be selected to be added into the game, out of 70 different submitted levels.</p>
+								<p>The competition allowed me to apply my level design skills to an industry project, as well as further honing my skills and gaining some industry experience in the process. As a team, we created multiple different levels before choosing one to refine as the final product; I lead the team, and the level that we ultimately picked was one that I designed.</p>
+								<p>The level is available to play in-game now, it is Level 33. The game is available for PC from the <a href="https://store.ubi.com/uk/rabbids-coding/5d96f9075cdf9a2eacdf68c9.html">Ubisoft Store.</a></p>
+								<h3>Design Process and Level Playthrough Video:</h3>
+								<div class="container">
+									<iframe src="https://www.youtube.com/embed/videoseries?list=PLpGtHlgyzLasFDSwjZjEctvN_SmB8RMGo" title="Piccadilly Potteria Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
+								</div>
+								<br />
+							</div>
+						</div>
+						<ul class="alt"><li></li><li></li></ul>
+						<!-- Ammo Crisis Uni Design Work -->
+						<div id="AmmoCrisis">
+							<div class="inner">
+								<h1>AMMO CRISIS</h1>
+								<h2>Level Design, Gameplay Design</h2>
+								<p>As part of one of my university modules, I had to work in a framework to design and balance weapons and enemies, as well as creating a fun and balanced level. By working inside a Unreal Engine 4 framework it gave me a good insight into designing with mechanics and gameplay elements that other people have made.</p>
+								<p>When designing and creating the level, I produced a lot of design work including research into other shooter games for weapons, balancing weapons and enemies using charts in Excel, and creating bubble and pacing maps for the level itself.</p>
+								<p><a href="works/ammocrisis.html" class="button primary fit" style="font-size:1.25em">Full Design Documentation</a></p>
+								<h3>Level Gameplay Video:</h3>
+								<div class="container">
+									<iframe src="https://www.youtube.com/embed/Ce4hlYsMdcw" title="Ammo Crisis - Level Iteration 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
+								</div>
+								<br />
+								<p>All my work from the Introduction to Games Design module can be found <a href="works/introgamesdesign.html">here.</a></p>
+							</div>
+						</div>
+						<ul class="alt"><li></li><li></li></ul>
+
+						<a href="allworks.html" class="button primary fit" style="font-size:1.5em">All Works</a>
 						<br/><br/>
-
-						<h1>Projects</h1>
-
-						<section class="tiles">
-							<article class="style6">
-								<span class="image">
-									<img src="images/AllWorks/FishShift.jpg" alt="FishShift" />
-								</span>
-								<a href="portfolio.html#FishShift">
-									<h2>FISH SHIFT</h2>
-									<div class="content">
-										<h4 style="display:inline">GAME, TECHNICAL & LEVEL DESIGN, GAMEPLAY PROGRAMMING</h4>
-										<p>A 3D puzzle game prototype in which the player takes control of multiple fish to get through the level.</p>
-									</div>
-								</a>
-							</article>
-							<article class="style2">
-								<span class="image">
-									<img src="images/AllWorks/Shifty8s.jpg" alt="Shifty 8s" />
-								</span>
-								<a href="portfolio.html#Shifty8s">
-									<h2>Shifty 8s</h2>
-									<div class="content">
-										<h4 style="display:inline">Gameplay Programming, Music</h4>
-										<p>A card game developed in Unity for Major Jam 4: Cosmic.</p>
-									</div>
-								</a>
-							</article>
-							<article class="style5">
-								<span class="image">
-									<img src="images/AllWorks/DuaCar.jpg" alt="DuaCar" />
-								</span>
-								<a href="https://ben-thompson.itch.io/duacar">
-									<h2>DuaCar</h2>
-									<div class="content">
-										<h4 style="display:inline">GAME PROGRAMMING, GAME DESIGN</h4>
-										<p>A dual-car driving game prototype developed for Global Games Jam 2022, where the player has to control two cars and get them to the end.</p>
-									</div>
-								</a>
-							</article>
-							<article class="style1">
-								<span class="image">
-									<img src="images/AllWorks/RabbidsCoding.jpg" alt="Rabbids Coding Level Design Challenge" />
-								</span>
-								<a href="portfolio.html#RabbidsCoding">
-									<h2>RABBIDS CODING LEVEL DESIGN CHALLENGE</h2>
-									<div class="content">
-										<h4 style="display:inline">LEVEL DESIGN</h4>
-										<p>A competition hosted by Ubisoft, where I designed a level that was picked to be added to the game.</p>
-									</div>
-								</a>
-							</article>
-							<article class="style3">
-								<span class="image">
-									<img src="images/AllWorks/PiccadillyPotteria.jpg" alt="Piccadilly Potteria" />
-								</span>
-								<a href="portfolio.html#PiccadillyPotteria">
-									<h2>Piccadilly Potteria</h2>
-									<div class="content">
-										<h4 style="display:inline">Game Design, Gameplay Programming, Music</h4>
-										<p>A clay sculpting game developed for Stoke-on-TREND Games Jam 2021, made using Unreal Engine 4's blueprint system.</p>
-									</div>
-								</a>
-							</article>
-							<article class="style4">
-								<span class="image">
-									<img src="images/AllWorks/AmmoCrisis.jpg" alt="Ammo Crisis" />
-								</span>
-								<a href="portfolio.html#AmmoCrisis">
-									<h2>Ammo Crisis</h2>
-									<div class="content">
-										<h4 style="display:inline">Level Design, Gameplay Design</h4>
-										<p>A level designed for and built using a pre-built university framework.</p>
-									</div>
-								</a>
-							</article>
-							<article class="style1">
-								<span class="image">
-									<img src="images/AllWorks/IntroTo3DEngines.jpg" alt="Introduction to 3D Games Engines" />
-								</span>
-								<a href="works/IT3D.html">
-									<h2>Temple of the Ducks</h2>
-									<div class="content">
-										<h4 style="display:inline">Level & Gameplay Design, Gameplay Design, Music</h4>
-										<p>A set of two levels submitted for my Introduction to 3D Games Engines module created using Unreal Engine 4 frameworks, focusing on level building and blueprint scripting.</p>
-									</div>
-								</a>
-							</article>
-							<article class="style3">
-								<span class="image">
-									<img src="images/AllWorks/FGGS.jpg" alt="Further Games and Graphics Concepts" />
-								</span>
-								<a>
-									<h2>DirectX 11 Graphics Engine</h2>
-									<div class="content">
-										<h4 style="display:inline">Engine Programming</h4>
-										<p>A basic graphics renderer / game engine built in DirectX 11 and C++, that I'm currently developing as part of my Further Games and Graphics Concepts module.</p>
-									</div>
-								</a>
-							</article>
-							<article class="style6">
-								<span class="image">
-									<img src="images/AllWorks/SolusGalaxiaHiddenPlanet.jpg" alt="SOLUS GALAXIA: The Hidden Planet Original Soundtrack" />
-								</span>
-								<a href="music.html#OSTJam3">
-									<h2>SOLUS GALAXIA: The Hidden Planet Original Soundtrack</h2>
-									<div class="content">
-										<h4 style="display:inline">Music</h4>
-										<p>A soundtrack created for an expansion to SOLUS GALAXIA, composed for OST Composing Jam #3.</p>
-									</div>
-								</a>
-							</article>
-							<article class="style5">
-								<span class="image">
-									<img src="images/AllWorks/SolusGalaxia.jpg" alt="SOLUS GALAXIA Original Soundtrack" />
-								</span>
-								<a href="music.html#OSTJam2">
-									<h2>SOLUS GALAXIA Original Soundtrack</h2>
-									<div class="content">
-										<h4 style="display:inline">Music</h4>
-										<p>A soundtrack created for a fictional game for OST Composing Jam #2; the soundtrack placed 4th overall.</p>
-									</div>
-								</a>
-							</article>
-							<article class="style6">
-								<span class="image">
-									<img src="images/AllWorks/BWDreamsOfAdventure.jpg" alt="Dreams of Adventure - Pokémon Black and White" />
-								</span>
-								<a href="https://soundcloud.com/benthompson-dev/sets/dreams-of-adventure-pokemon-black-and-white">
-									<h2>Dreams of Adventure - Pokémon Black and White</h2>
-									<div class="content">
-										<h4 style="display:inline">Music</h4>
-										<p>An arrangement of two tracks from Pokémon Black and White made for OST Composing Jam: PASTIME II.</p>
-									</div>
-								</a>
-							</article>
-							<article class="style5">
-								<span class="image">
-									<img src="images/AllWorks/IntroToGamesDesign.jpg" alt="Intro to Games Design" />
-								</span>
-								<a href="works/introgamesdesign.html">
-									<h2>Introduction to Games Design</h2>
-									<div class="content">
-										<h4 style="display:inline">Game / Level Design</h4>
-										<p>Collection of work submitted for my Introduction to Games Design module.</p>
-									</div>
-								</a>
-							</article>
-							<article class="style1">
-								<span class="image">
-									<img src="images/AllWorks/RapidPrototypes.jpg" alt="Rapid Games Prototyping" />
-								</span>
-								<a>
-									<h2>Rapid Games Prototyping</h2>
-									<div class="content">
-										<h4 style="display:inline">Game Design, Gameplay Programming</h4>
-										<p>A set of two Unity game prototypes based on existing frameworks designed to extend framework functionality and create unique gameplay.</p>
-									</div>
-								</a>
-							</article>
-							<article class="style3">
-								<span class="image">
-									<img src="images/AllWorks/GECMarioBros.jpg" alt="Mario Bros. Project" />
-								</span>
-								<a href="https://github.com/BenThompson-Dev/MarioProject">
-									<h2>Mario Bros. Recreation</h2>
-									<div class="content">
-										<h4 style="display:inline">Game Engine & Gameplay Programming</h4>
-										<p>A recreation of the original Mario Bros. arcade game made in C++ using SDL, made as a university project.</p>
-									</div>
-								</a>
-							</article>
-							<article class="style6">
-								<span class="image">
-									<img src="images/AllWorks/DPIntro.jpg" alt="Title Screen / Introduction" />
-								</span>
-								<a href="music.html#PastimeI">
-									<h2>Title Screen / Introduction (from "Pokémon Diamond and Pearl")</h2>
-									<div class="content">
-										<h4 style="display:inline">Music</h4>
-										<p>An arrangement of two tracks from Pokémon Diamond and Pearl made for OST Composing Jam: PASTIME I; the track placed in the top 5.</p>
-									</div>
-								</a>
-							</article>
-							<article class="style2">
-								<span class="image">
-									<img src="images/AllWorks/GemCollector.jpg" alt="Gem Collector" />
-								</span>
-								<a href="https://ben-thompson.itch.io/gem-collector">
-									<h2>Gem Collector</h2>
-									<div class="content">
-										<h4 style="display:inline">Game / Level Design, Programming</h4>
-										<p>A platformer in which you lose your abilities as you progress through the level, developed in Unity for Global Games Jam 2021.</p>
-									</div>
-								</a>
-							</article>
-							<article class="style3">
-								<span class="image">
-									<img src="images/AllWorks/UntitledShipGame.jpg" alt="Untitled Ship Game" />
-								</span>
-								<a href="https://ben-thompson.itch.io/untitled-ship-game">
-									<h2>Untitled Ship Game</h2>
-									<div class="content">
-										<h4 style="display:inline">Game Concept / Design, Additional Programming</h4>
-										<p>A top-down shooter game developed using Unreal Engine 4's blueprint system, for GT:Jam 2020.</p>
-									</div>
-								</a>
-							</article>
-						</section>
-
-						<br />
 
 						<h1>Connect</h1>
 						<p>The easiest way to contact me is through email, but I'm also available on LinkedIn and Twitter.</p>
